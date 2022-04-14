@@ -1,0 +1,18 @@
+extends Layout
+
+block content
+  h1= title
+  p Page of #{title}
+
+    .content.info
+      .no No. : #{data.no++ }
+      .writer 작성자 : #{data.writer}
+      .moment 작성날짜 : #{now}
+    .title &nbsp; 제목 : 
+      input(type="text")
+    .content 내용 : 
+      input.script(type="text" width="500px" height="250px")
+
+  .blank
+  input(type="button" value="저장" onClick="location.href='/board/write'") 
+  input(type="button" value="목록으로" onClick="location.href='/board'") 

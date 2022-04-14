@@ -1,0 +1,22 @@
+extends Layout
+
+block content
+  h1= title
+  p Page of #{title}
+  .toHome
+    a(href="/") '홈으로 돌아가기'
+
+  ul
+    each value in head
+      span.head #{value}
+    br
+    a(href="/board/read") 
+      each val in data
+          span #{val}
+
+    .blank
+
+    .ListButton
+      input(type="button" value="글쓰기" onClick="location.href='/board/write'") 
+      
+      

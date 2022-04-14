@@ -1,0 +1,19 @@
+extends Layout
+
+block content
+  h1= title
+  p #{title}
+
+  
+  .content.info
+    .no No. : #{data.no}
+    .title 제목 : #{data.title}
+    .writer 작성자 : #{data.writer}
+    .moment 작성날짜 : #{data.moment}
+  .content 내용 : 
+    .script 123
+
+  .blank
+  input(type="button" value="수정하기" onClick="location.href='/board/modify'") 
+  input(type="button" value="삭제하기" onClick="location.href='/board/delete'") 
+  input(type="button" value="목록으로" onClick="location.href='/board'") 
