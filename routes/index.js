@@ -15,4 +15,9 @@ router.get("/cors-test", (req, res)=>{
   res.cookie("cors123", "value123");
   res.redirect("/");
 })
+
+router.get("/metamask", (req, res)=>{
+  res.render("MetaMask");
+})
+
 module.exports = router;

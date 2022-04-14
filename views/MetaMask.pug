@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  script(src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js")
+  script(src="/javascripts/metamask.js")
+
+  h1= title
+  p #{title}
+
+  h1 ETH Balance Fetcher
+  p Enter your Ethereum Address:
+  input(type="text" size="50" id="address") 
+  button.enableEthereumButton(type="button" onClick="javscript:getBalance();") Get Balance
+  br
+  br
+  #id="output"

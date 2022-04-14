@@ -3,6 +3,7 @@ extends layout
 block content
   script(src="https://developers.kakao.com/sdk/js/kakao.js")
   script(src="/javascripts/kakaoLogin.js")
+
   h1= title
   p Welcome to #{title}
 
@@ -11,14 +12,35 @@ block content
       img(src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" )
   span 시간관계상 토큰체크만 : 
     p#token-result 
+  a.LogoutKakao(href="javascript:kakaoLogout()") 로그아웃
   br
 
-  a.LogoutKakao(href="javascript:kakaoLogout()") 로그아웃
   br
 
   a(href="/getCookie") 토큰 트루 
   br
   a(href="/cors-test") Cors통신
+  br
+  br
+
+  .algo 알고리즘
+   p 피보나치
+    input.fibvalue
+    br
+    input(type="button" value="입력")
+   br
+   p 정수들
+    input.integers
+    br
+    input(type="button" value="입력")
+   br
+   p 더했을때 3개의 소수
+    input.primenumber
+    br
+    input(type="button" value="입력")
+
+  a(href="/metamask") 메타마스크 지갑 
+  br
   br
   .toBoard 
     a(href="/board") 게시판으로
